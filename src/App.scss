@@ -1,0 +1,192 @@
+@use './styles/utils/variables' as *;
+@use './styles/utils/mixins' as *;
+
+$linear-gradient: rgba(255, 255, 255, 0.7);
+
+
+.container {
+    padding: 2.5rem 1rem;
+}
+
+@include on-tablet {
+    .container {
+        padding: 3rem 2rem;
+    }
+}
+
+@include on-small-desktop {
+    .container {
+        padding: 5rem 6rem;
+    }
+}
+
+@include on-large-desktop {
+    .container {
+        width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: $background-nav;
+    padding: 1rem 0;
+
+    &__logo {
+        max-width: 10rem;
+    }
+
+    &__lang {
+        margin-right: 1rem;
+        padding: .5rem;
+    }
+
+    &__title {
+        cursor: pointer;
+    }
+}
+
+.title {
+    font-family: $font-title;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.banner1 {
+    background-image: linear-gradient($linear-gradient, $linear-gradient), url(./assets/img/background-banner1.jpg);
+    background-size: cover;
+    background-position: center;
+    font-size: 1.2rem;
+    color: $font-contrast;
+}
+
+.main {
+    background-color: $background;
+    margin-top: 2rem;
+    padding: 3rem 0;
+    color: $font-color;
+    clip-path: polygon(0% 0%, 100% 8%, 100% 85%, 0% 100%);
+}
+
+.banner2 {
+    &__img {
+        border-radius: 0.8rem;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+    padding: 0.8rem;
+    border-radius: 1.2rem;
+    margin-bottom: 2rem;
+    @include shadow-box;
+
+    &__img {
+        border-radius: 0.8rem;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+}
+
+.question {
+    background-color: $background;
+    color: $font-color;
+    clip-path: polygon(0% 0%, 100% 4%, 100% 100%, 0% 95%);
+    padding: 3rem 0;
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__subtitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__card {
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid $font-color;
+
+        &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+    }
+}
+
+.contact-us {
+    padding: 1rem;
+    border-radius: 1rem;
+    @include shadow-box;
+
+    &__button {
+        margin-top: 1.2rem;
+        background-color: $background-nav;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        transition: scale $transition;
+        color: $font-color;
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+}
+
+.footer {
+    color: $font-color;
+    background-color: $background-nav;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+
+    .bold {
+        font-family: $font-title;
+        font-weight: 600;
+    }
+}
+
+@include on-small-desktop {
+    .nav {
+        padding: 1rem 10%;
+    }
+
+    .banner1 {
+        padding: auto;
+        height: 60vh;
+
+        .container {
+            padding-right: 30%;
+        }
+
+        &__title {
+            font-size: 2.2rem;
+        }
+    }
+
+    .cards {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .main__title {
+        font-size: 2.2rem;
+    }
+
+    .question {
+        clip-path: polygon(0% 0%, 100% 7%, 100% 100%, 0% 95%);
+    }
+}
+
+@include on-large-desktop {
+    .contact-us {
+        padding: 2rem;
+    }
+}
