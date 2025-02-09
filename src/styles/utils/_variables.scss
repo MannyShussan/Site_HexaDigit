@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap');
+
+$background: #554956;
+$font-title: "Anybody", serif;
+$font-contrast: #2c212f;
+$font-color: #AAAAAA;
+$shadow-box: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+$shadow-box-hover: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+$transition: 0.3s ease-in-out;
+$transition-hover: scale $transition, box-shadow $transition;
+
+$background-nav: #453b46;
+
+// size
+
+$tablet-min-width: 640px;
+$small-desktop-min-width: 1024px;
+$large-desktop-min-width: 1600px;
